@@ -88,7 +88,7 @@ class Vislice:
         if self.igre == {}:
             return 0
         else:
-            return max(sel.igre.keys()) + 1
+            return max(self.igre.keys()) + 1
 
     def nova_igra(self):
         id = self.prost_id_igre()
