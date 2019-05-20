@@ -9,7 +9,7 @@
 <table>
 <tr>
 <td>
-<h2>{{iigra.pravilni_del_gesla()}}</h2>
+<h2>{{igra.pravilni_del_gesla()}}</h2>
 Nepravilni ugibi: <b>{{igra.nepravilni_ugibi()}}<br>
 </td>
 <td>

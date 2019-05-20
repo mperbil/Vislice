@@ -38,21 +38,21 @@ class Igra:
         return True
     
     def poraz(self):
-        return self.napacne_crke() >= STEVILO_DOVOLJENIH_NAPAK:
+        return self.stevilo_napak() >= STEVILO_DOVOLJENIH_NAPAK
 
     def pravilni_del_gesla(self):
-        sez = []
-        for crka in self.crke:
-            if crka in self.pravilne_crke():
-                sez.append(crka)
+        sez = ''
+        for crka in self.geslo:
+            if crka in self.crke:
+                sez+= crka + ' '
             else:
-                sez.append('_')
+                sez += '_ '
         return sez
 
     def nepravilni_ugibi(self):
-        niz = ''
-        niz.join(self.napacne_crke())
-        return niz.split(' ')
+
+        return ' '.join(self.napacne_crke())
+   
 
     def ugibaj(self, crka):
         crka = crka.upper()
@@ -98,8 +98,8 @@ class Vislice:
 
     def ugibaj(self, id, crka):
         igra, _= self.igre[id]
-        igra.ugibaj(crka)
-        self.igra[id] = (igra, stanje)
+        stanje = igra.ugibaj(crka)
+        self.igre[id] = (igra, stanje)
 
 
 
