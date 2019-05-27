@@ -1,9 +1,6 @@
 % import model
+%rebase('base.tpl', title='Vislice')
 
-<!DOCTYPE html>
-<html>
-
-<body>
 
   <h1>Vislice</h1>
 <table>
@@ -31,13 +28,9 @@ Nepravilni ugibi: <b>{{igra.nepravilni_ugibi()}}<br>
 Pravilno geslo: <h4> {{igra.geslo}} </h4>
 
 %else:
-<form action="/igra/{{id_igre}}/" method="POST">
+<form action="/igra/" method="POST">
 Črka: <input type="text" name="crka">
 <button type="submit">Poslji ugib</button>
 </form>
 % end
 
-
-</body>
-
-</html>

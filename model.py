@@ -9,6 +9,7 @@ PORAZ = 'X'
 ZACETEK = 'Z'
 
 
+
 class Igra:
     def __init__(self, geslo, crke=[]):
         self.geslo = geslo
